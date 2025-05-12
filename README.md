@@ -4,7 +4,7 @@ Welcome to my portfolio! This document provides a detailed overview of my educat
 
 ## About Me
 
-Hi, I'm Anush Shrestha, a dedicated BCA student from Nepal. Passionate about programming and development, I am always eager to learn and grow in the field of technology. My portfolio serves as a showcase of my academic progress, projects, and future ambitions.
+Hi, I'm Prerana Dahal, a dedicated BCA student from Nepal. Passionate about programming and development, I am always eager to learn and grow in the field of technology. My portfolio serves as a showcase of my academic progress, projects, and future ambitions.
 
 ## Education
 
