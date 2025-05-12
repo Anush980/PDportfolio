@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio - BCA Student</title>
+    <script src="https://kit.fontawesome.com/77705145e1.js" crossorigin="anonymous"></script>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f9;
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #3498db;
+            z-index: 1000;
+            padding: 15px 0;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #2980b9;
+        }
+
+        /* Sections */
+        section {
+            min-height: 100vh;
+            padding: 100px 20px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #2c3e50;
+            text-align: center;
+        }
+
+        /* Home Section */
+        #home {
+            background-color: #ecf8ff;
+            text-align: center;
+        }
+
+        #home img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 5px solid #3498db;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        #home img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(14, 224, 179, 0.3);
+        }
+
+        #home h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        #home p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 20px;
+        }
+
+        /* Education Section */
+        #education {
+            background-color: #dff6e4;
+        }
+
+        .education-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1000px;
+        }
+
+        .education-item {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .education-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .education-item h3 {
+            color: #3498db;
+            margin-bottom: 10px;
+        }
+
+        .education-item p {
+            margin-bottom: 5px;
+        }
+
+        /* Skills Section */
+        #skills {
+            background-color: #fef7e0;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 800px;
+        }
+
+        .skill-category {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 350px;
+        }
+
+        .skill-category h3 {
+            color: #3498db;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .skill-item {
+            margin-bottom: 10px;
+        }
+
+        .skill-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .skill-bar {
+            height: 10px;
+            background: #ecf0f1;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .skill-level {
+            height: 100%;
+            background: #3498db;
+            border-radius: 5px;
+        }
+
+        /* Contact Section */
+        #contact {
+            background-color: #f4f8ff;
+        }
+
+        .contact-form {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 35px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        .socialLinks {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .socialLinks a {
+            color: #3498db;
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+
+        .socialLinks a:hover {
+            transform: scale(1.2);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #3498db;
+            color: white;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <img src="profile.jpg">
+        <h1>Prerana Dahal</h1>
+        <p>BCA Student</p>
+        <p>I'm currently pursuing my Bachelor's in Computer Applications with a passion for web development and programming. I enjoy learning new technologies and solving complex problems.</p>
+    </section>
+ <!-- Education Section -->
+ <section id="education">
+    <h2>Education</h2>
+    <div class="education-container">
+        <div class="education-item">
+            <h3>Bachelor of Computer Applications (BCA)</h3>
+            <p>                <strong>Institution:</strong>TU University</p>
+            <p><strong>Year:</strong> 2081 - Present</p>
+            <p><strong>Details:</strong> Studying advanced concepts in computer science, programming, and software development.</p>
+        </div>
+        <div class="education-item">
+            <h3>Higher Secondary Education</h3>
+            <p><strong>Institution:</strong> NEB </p>
+            <p><strong>Year:</strong> 2080</p>
+            <p><strong>Details:</strong> Completed coursework in science and mathematics, with an emphasis on science and problem-solving techniques.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills">
+    <h2> My Skills</h2>
+    <div class="skills-container">
+        <div class="skill-category">
+            <h3>Programming</h3>
+            <div class="skill-item">
+                <span class="skill-name">Java</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 20%;"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <span class="skill-name">C </span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 50%;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="skill-category">
+            <h3>Web Development</h3>
+            <div class="skill-item">
+                <span class="skill-name">HTML</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 60%;"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <span class="skill-name">CSS</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 65%;"></div>
+                </div>
+            </div>
+            
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <h2>Contact</h2>
+    <form class="contact-form" action="#" method="post">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+    </form>
+    <div class="socialLinks">
+        <a href="https://www.facebook.com/profile.php?id=61573395961523" target="_blank"><i class="fa fa-facebook-official fa-2x"></i></a>
+        <a href="https://www.instagram.com/prernaaaaaa11" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>   
+        <a href="https://www.github.com/Anush980" target="_blank"><i class="fab fa-github fa-2x"></i></a> 
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 Prerana Dahal. All rights reserved.</p>
+</footer>
+</body>
+</html>
