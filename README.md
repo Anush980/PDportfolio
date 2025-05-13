@@ -1,3 +1,4 @@
+## live preview of my portfolio: view[https://prernadahalst.github.io/portfolio/#home]
 ## BCA Student Portfolio
 
 Welcome to my portfolio! This document provides a detailed overview of my education, skills, and contact information. As a Bachelor of Computer Applications (BCA) student, I aim to highlight my academic journey, technical skills, and aspirations in the field of technology.
